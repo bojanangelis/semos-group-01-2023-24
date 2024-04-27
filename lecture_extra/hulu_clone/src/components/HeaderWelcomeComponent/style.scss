@@ -1,0 +1,157 @@
+@import '../../index.scss';
+
+.main-header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .links {
+    padding-top: 40px;
+    text-align: center;
+  }
+  h5 {
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+.header-welcome__component nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  z-index: 2;
+  position: relative;
+}
+
+.header-welcome__component nav .login-btn__welcome {
+  cursor: pointer;
+  background: none;
+  border: none;
+  opacity: 0.5;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+.header-welcome__component nav .login-btn__welcome:hover {
+  opacity: 0.8;
+  color: #fff;
+  transition-duration: 150ms;
+  transition: ease-in-out all 0.5s;
+  background-color: rgb(80, 80, 80);
+}
+
+.header-welcome__component .logo-welcome__component {
+  cursor: pointer;
+}
+
+.header-welcome__component .logo {
+  width: 280px;
+  object-fit: contain;
+}
+
+.header-welcome__component .logo_trio {
+  width: 360px;
+  object-fit: contain;
+}
+
+.header-welcome__component .header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  @include sm {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 80px;
+  }
+}
+
+.header-content__view {
+  display: flex;
+  // margin: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include sm {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.header-welcome__component .header-content-text {
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  font-family: Graphik Web, Graphik, sans-serif;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.32;
+  text-transform: none;
+  margin-top: 8px;
+}
+
+.header-welcome__component::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.76) 15.54%,
+    rgba(0, 0, 0, 0.192) 60.23%,
+    rgba(0, 0, 0, 8e-5) 100%
+  );
+}
+
+.dropbtn {
+  background: #04aa6d;
+  border: none;
+  font-size: 17px;
+  padding: 17px;
+  color: #fff;
+}
+
+.drobdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  background: #f1f1f1;
+  min-width: 160px;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  padding: 17px;
+  font-size: 18px;
+}
+
+.dropdown-content a:hover {
+  background: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background: #3e8341;
+}

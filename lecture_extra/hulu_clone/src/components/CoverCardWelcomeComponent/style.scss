@@ -1,0 +1,55 @@
+.cover-card__button {
+  background: none;
+  color: white;
+  border: none;
+  position: relative;
+  border: 4px solid hsla(0, 0%, 100%, 0);
+  border-radius: 16px;
+  padding: 4px;
+  opacity: 1;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.cover-card__button .cover-grad {
+  position: absolute;
+  border-radius: 16px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(156.82deg, rgba(0, 0, 0, 0.6) 4.58%, rgba(0, 0, 0, 0) 69.61%),
+    linear-gradient(24.5deg, rgba(0, 0, 0, 0.2) 4.71%, rgba(0, 0, 0, 0) 71.49%);
+}
+
+.poster_image {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.cover-card__button:hover {
+  transform: all;
+  border: 4px solid rgb(90, 90, 90);
+  transition-duration: 90ms;
+  transition: ease-in-out all 0.2s;
+  opacity: 0.9;
+}
+
+.cover-card__text {
+  position: absolute;
+  top: 20px;
+  text-align: left;
+  left: 20px;
+  z-index: 9999999;
+  .sub-title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.44;
+    letter-spacing: 0;
+  }
+  p {
+    font-weight: 600;
+    font-size: larger;
+  }
+}
