@@ -6,7 +6,11 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
   useEffect(() => {
     if (fetchUrl) {
       async function fetchData() {
-        const request = await fetch(import.meta.env.VITE_REACT_APP_TMDB_URL + fetchUrl)
+        // 2Authenticate
+        // VITE_REACT_TMDB_API_KEY = tuka odi kluchot od https://developer.themoviedb.org/reference/intro/getting-started
+        // https://developer.themoviedb.org/reference/intro/getting-started
+        // VITE_REACT_APP_TMDB_URL=https://api.themoviedb.org/3
+        const request = await fetch('https://api.themoviedb.org/3' + fetchUrl)
         const data = await request.json()
         setMovies(data.results)
         return request
@@ -15,7 +19,7 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
     }
   }, [fetchUrl])
   const base_url = 'https://image.tmdb.org/t/p/original/'
-  console.log(movies)
+
   return (
     <div className='row'>
       <h2 style={{ color: 'black' }}>{title}</h2>

@@ -21,6 +21,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>
 )
 
+// VITE_REACT_APP_TMDB_URL=https://api.themoviedb.org/3
+
 // clerk.com
 // kreirate .env folder vo root app
 // treba neshto vaka da izgleda
