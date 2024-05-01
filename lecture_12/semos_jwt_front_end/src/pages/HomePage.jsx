@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 
 const HomePage = () => {
-
+  const [data, setData] = useState([])
+  const navigate = useNavigate()
     useEffect(() => {
         const fetchData = async() => {
 
@@ -13,15 +15,26 @@ const HomePage = () => {
             },
 
         })
-        console.log(await data.json())
+        setData(await data.json())
     }
-
     fetchData()
-
     }, [])
 
   return (
-    <div>HomePage</div>
+    <div>
+      <h2>Our products</h2>
+      <button onClick={() => navigate('/create')}>Add new product</button>
+        {
+            data.map((item) => (
+              <button onClick={() => navigate(`/edit/${item._id}`, {id: item._id})} key={item._id}>
+               <h3>{item.ime}</h3>
+                {item.making.map((making)=> (
+                  <p key={making}>{making}</p>
+                ))}
+              </button>
+            ))
+        }
+    </div>
   )
 }
 

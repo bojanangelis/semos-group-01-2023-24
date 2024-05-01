@@ -6,6 +6,8 @@ import { useEffect } from 'react'
 import { useJwt } from "react-jwt";
 import { jwtDecode } from "jwt-decode";
 import ProtectedRoute from './pages/ProtectedRoute'
+import CreatePage from './pages/CreatePage'
+import EditPage from './pages/EditPage'
 
 
 function App() {
@@ -42,6 +44,17 @@ function App() {
         <Route path='/' element={
         <ProtectedRoute>
           <HomePage />
+        </ProtectedRoute>
+        } />
+
+<Route path='/create' element={
+        <ProtectedRoute>
+          <CreatePage />
+        </ProtectedRoute>
+        } />
+        <Route path='/edit/:id' element={
+        <ProtectedRoute>
+          <EditPage />
         </ProtectedRoute>
         } />
 {/* 

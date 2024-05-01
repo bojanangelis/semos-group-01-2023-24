@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const LoginPage = ({}) => {
-    const [email, setEmail] = useState('react@gmail.com')
-    const [password, setPassword] = useState('Ljochev123456')
+    const [email, setEmail] = useState('ljochev@gmail.com')
+    const [password, setPassword] = useState('ljochev123456')
     const navigate = useNavigate()
 
     const handleLogin = async (e) => {
@@ -23,7 +23,7 @@ const LoginPage = ({}) => {
             })
         })
         const jwt_token = await data.json()
-
+        console.log(jwt_token)
         if(jwt_token) {
             localStorage.setItem('jwt_token', jwt_token.token)
             navigate('/')
